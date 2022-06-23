@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B6FCA39D-FC31-4329-BD10-152E13649AC9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FDTechDurEncridRuntime10</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Librarys\glew-1.12.0\include;C:\Librarys\lpnginc;C:\Librarys\openal-soft-1.16.0-bin\include;C:\Librarys\jpegsr9\jpeg-9;$(IncludePath)</IncludePath>
+    <ReferencePath>C:\Librarys\glew-1.12.0\lib\Release\Win32;C:\Librarys\lpnglibs;C:\Librarys\openal-soft-1.16.0-bin\libs\Win32;C:\Librarys\jpegsr9\jpeg-9\Debug;$(ReferencePath)</ReferencePath>
+    <LibraryPath>C:\Librarys\glew-1.12.0\lib\Release\Win32;C:\Librarys\lpnglibs;C:\Librarys\openal-soft-1.16.0-bin\libs\Win32;C:\Librarys\jpegsr9\jpeg-9\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FDTECHDURENCRIDRUNTIME10_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;libcmtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FDTECHDURENCRIDRUNTIME10_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Encrid.h" />
+    <ClInclude Include="Encrid2DAnimation.h" />
+    <ClInclude Include="EncridBitmap.h" />
+    <ClInclude Include="EncridCamera.h" />
+    <ClInclude Include="EncridDevice.h" />
+    <ClInclude Include="EncridGame.h" />
+    <ClInclude Include="EncridGLSL.h" />
+    <ClInclude Include="EncridIDGen.h" />
+    <ClInclude Include="EncridImage.h" />
+    <ClInclude Include="EncridInput.h" />
+    <ClInclude Include="EncridInputKeyCodes.h" />
+    <ClInclude Include="EncridJPEG.h" />
+    <ClInclude Include="EncridModel.h" />
+    <ClInclude Include="EncridShapes.h" />
+    <ClInclude Include="EncridWavefrontLoader.h" />
+    <ClInclude Include="EncridPhysics.h" />
+    <ClInclude Include="EncridPixelFormat.h" />
+    <ClInclude Include="EncridPNG.h" />
+    <ClInclude Include="EncridPosSize.h" />
+    <ClInclude Include="EncridSound.h" />
+    <ClInclude Include="EncridTransform.h" />
+    <ClInclude Include="EncridWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Encrid.cpp" />
+    <ClCompile Include="Encrid2DAnimation.cpp" />
+    <ClCompile Include="EncridBitmap.cpp" />
+    <ClCompile Include="EncridCamera.cpp" />
+    <ClCompile Include="EncridDevice.cpp" />
+    <ClCompile Include="EncridGame.cpp" />
+    <ClCompile Include="EncridGLSL.cpp" />
+    <ClCompile Include="EncridIDGen.cpp" />
+    <ClCompile Include="EncridImage.cpp" />
+    <ClCompile Include="EncridInput.cpp" />
+    <ClCompile Include="EncridJPEG.cpp" />
+    <ClCompile Include="EncridModel.cpp" />
+    <ClCompile Include="EncridPhysics.cpp" />
+    <ClCompile Include="EncridPixelFormat.cpp" />
+    <ClCompile Include="EncridPNG.cpp" />
+    <ClCompile Include="EncridPosSize.cpp" />
+    <ClCompile Include="EncridShapes.cpp" />
+    <ClCompile Include="EncridSound.cpp" />
+    <ClCompile Include="EncridTransform.cpp" />
+    <ClCompile Include="EncridWavefrontLoader.cpp" />
+    <ClCompile Include="EncridWindow.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
